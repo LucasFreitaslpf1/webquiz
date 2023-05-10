@@ -13,17 +13,17 @@
 
     <h:body>
 
-        <div id="top">
+        <header>
             <ui:insert name="top">Top</ui:insert>
-        </div>
+        </header>
 
-        <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
-        </div>
+        <main class="center_content">
+            <ui:include src="footer.xhtml"/>
+        </main>
 
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
-        </div>
+        <footer>
+            <ui:include src="footer.xhtml"/>
+        </footer>
 
     </h:body>
 
