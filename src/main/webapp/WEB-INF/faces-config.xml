@@ -27,11 +27,13 @@
         
         <locale-config>
             <default-locale>pt-BR</default-locale>
+            <supported-locale>es</supported-locale>
+            <supported-locale>en</supported-locale>
         </locale-config>
         
         <resource-bundle>
-            <base-name>string.i18n</base-name>
-            <var>i18n</var>
+            <base-name>msgs.dicionario</base-name>
+            <var>dicionario</var>
         </resource-bundle>
         
     </application>
