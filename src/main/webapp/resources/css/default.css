@@ -3,13 +3,12 @@ body {
     font-size: 12px;
     font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     color: #000000;  
-    margin-left: 15%;
-    margin-right: 15%;
-    
+    margin: 10px;
 }
 
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
     font-size:  16px;
     font-weight: bold;
     margin: 0px;
@@ -27,26 +26,4 @@ a:link:hover, a:visited:hover  {
   color: #045491;
   font-weight : bold;
   text-decoration : underline;
-}
-
-header{
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 15px;
-    background-color: #99dee6;
-    text-align: center;
-}
-
-footer{
-    background-color: #99dee6;
-    text-align: center;
-}
-
-.titulo{
-    font-size: 30px;
-    font-family: sans-serif;
-}
-
-.logo{
-   width: 30%;
 }
