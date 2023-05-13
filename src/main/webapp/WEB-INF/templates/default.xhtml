@@ -17,9 +17,14 @@
             <ui:include src="header.xhtml"/>
         </header>
 
-        <main class="center_content">
-            <ui:include src="main.xhtml"/>
+        <!--        <main class="center_content">
+                    <ui:include src="main.xhtml"/>
+                </main>-->
+
+        <main class="center">
+            <ui:insert name="content">Content</ui:insert>
         </main>
+
 
         <footer>
             <ui:include src="footer.xhtml"/>
