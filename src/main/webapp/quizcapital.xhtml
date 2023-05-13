@@ -25,7 +25,7 @@
             <!-- todo - Fazer um randômico para a escolha do país -->
             <h:outputLabel for="pais" value="Escolha um país:"/><br/><br/>
 
-            <h:selectOneMenu id="pais"> 
+            <h:selectOneMenu id="pais" value="#{userCapitalBean.paisSelecionado}"> 
                 <f:selectItem itemLabel="Selecione um país"/>
                 <f:selectItem itemValue="brasil" itemLabel="Brasil"/>
                 <f:selectItem itemValue="eua" itemLabel="Estados Unidos"/>
@@ -39,7 +39,7 @@
             </h:selectOneMenu><br/><br/>
             
              <h:outputLabel for="resposta" value="Adivinhe a capital do país dentre as seguintes opções:"/><br/><br/>
-            <h:selectOneMenu>
+             <h:selectOneMenu id="capital" value="#{userCapitalBean.capitalSelecionada}">
                 <f:selectItem itemLabel="Selecione uma Capital"/>
                 <f:selectItem itemValue="brasilia" itemLabel="Brasilia"/>
                 <f:selectItem itemValue="washington" itemLabel="Washington"/>
@@ -53,7 +53,7 @@
             </h:selectOneMenu><br/><br/>
 
             <h:commandButton
-                action="resposta"
+                action="#{userCapitalBean.resposta}"
                 value="Enviar"
                 />
 
