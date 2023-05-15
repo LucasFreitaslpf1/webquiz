@@ -8,12 +8,6 @@
     <ui:insert name="mapa">
         <br/><br/>
         <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'welcome'}"
-                outcome="welcome"
-                value="Inicio" />
-        </span>
-        <span style="display: inline-block;">
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'main'}"
                 outcome="main" 
@@ -22,7 +16,7 @@
         <span style="display: inline-block;">
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'sobre'}"
-                outcome="sobre" 
+                outcome="Sobre" 
                 value="Sobre" />
         </span>
         <br/>

@@ -30,11 +30,15 @@ a:link:hover, a:visited:hover  {
 }
 
 header{
+    display: flex;
+    align-items: center;
+    /*height: 300px;*/
+    justify-content: center;
     padding-bottom: 15px;
     padding-top: 15px;
     padding-left: 15px;
     background-color: #99dee6;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 footer{
@@ -48,5 +52,6 @@ footer{
 }
 
 .logo{
-   width: 30%;
+   width: 20%;
+   margin-right: 5px;
 }
