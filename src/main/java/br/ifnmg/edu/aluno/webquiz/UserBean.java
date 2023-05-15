@@ -20,6 +20,10 @@ public class UserBean implements Serializable {
         this.name = name;
     }
 
+    public UserBean() {
+    }
+    
+
     public String logout() {
         FacesContext
                 .getCurrentInstance()

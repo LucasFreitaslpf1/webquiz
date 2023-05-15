@@ -3,10 +3,18 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./WEB-INF/templates/default.xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="content">
-
+        <h1><h:outputFormat
+                value="#{dicionario.bem_vindo}">
+                <f:param 
+                    value="#{empty userBean.name ? dicionario.visitante : userBean.name}" />
+            </h:outputFormat></h1>
+        <h2>
+            Escolha um quiz para jogar
+        </h2><br/><br/>
         
     </ui:define>
 
