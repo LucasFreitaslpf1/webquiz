@@ -15,18 +15,14 @@ public class UserCapitalBean implements Serializable {
     private String paisSelecionado;
     private String capitalSelecionada;
     private String resposta;
-    private String respostaCorreta;
-    private String respostaIncorreta;
+    private Boolean respostaCorreta;
 
-    public UserCapitalBean() {
-        this.paisSelecionado = paisSelecionado;
-        this.capitalSelecionada = capitalSelecionada;
-        this.resposta = resposta;
-    }
+//    public UserCapitalBean() {
+//        this.paisSelecionado = paisSelecionado;
+//        this.capitalSelecionada = capitalSelecionada;
+//        this.resposta = resposta;
+//    }
 
-    
-    
-    
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public String getPaisSelecionado() {
         return paisSelecionado;
@@ -52,58 +48,43 @@ public class UserCapitalBean implements Serializable {
         this.resposta = resposta;
     }
 
-    public String getRespostaCorreta() {
+    public Boolean getRespostaCorreta() {
         return respostaCorreta;
     }
 
-    public void setRespostaCorreta(String respostaCorreta) {
+    public void setRespostaCorreta(Boolean respostaCorreta) {
         this.respostaCorreta = respostaCorreta;
     }
 
-    public String getRespostaIncorreta() {
-        return respostaIncorreta;
-    }
-
-    public void setRespostaIncorreta(String respostaIncorreta) {
-        this.respostaIncorreta = respostaIncorreta;
-    }
-    
-
 //</editor-fold>
-    
-    public String verificarResposta(){
-        if("brasil".equals(paisSelecionado) && "brasilia".equals(capitalSelecionada)){
-           resposta = "Resposta Correta!";
-        }else if("eua".equals(paisSelecionado) && "washington".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("franca".equals(paisSelecionado) && "paris".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("japao".equals(paisSelecionado) && "toquio".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("australia".equals(paisSelecionado) && "sidney".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("argentina".equals(paisSelecionado) && "buenos aires".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("belgica".equals(paisSelecionado) && "bruxelas".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("canada".equals(paisSelecionado) && "otava".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else if("china".equals(paisSelecionado) && "pequim".equals(capitalSelecionada)){
-            resposta = "Resposta Correta!";
-        }else{
-            resposta = "Resposta Incorreta!";
-        }
-        
-        
-        return "resultado";
-    }
-    
-        public String imprimeResposta() {
-        if ("Resposta Correta!".equals(resposta)) {
-            return "Resposta Correta!";
+    public String verificarResposta() {
+        if ("brasil".equals(paisSelecionado) && "brasilia".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("eua".equals(paisSelecionado) && "washington".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("franca".equals(paisSelecionado) && "paris".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("japao".equals(paisSelecionado) && "toquio".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("australia".equals(paisSelecionado) && "sidney".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("argentina".equals(paisSelecionado) && "buenos aires".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("belgica".equals(paisSelecionado) && "bruxelas".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("canada".equals(paisSelecionado) && "otava".equals(capitalSelecionada)) {
+            respostaCorreta = true;
+        } else if ("china".equals(paisSelecionado) && "pequim".equals(capitalSelecionada)) {
+            respostaCorreta = true;
         } else {
-            return "Resposta Incorreta!";
+            respostaCorreta = false;
         }
+
+        return geraResultado();
     }
-    
+
+    public String geraResultado() {
+        return respostaCorreta ? "Parabéns! Resposta Correta!" : "Resposta Incorreta! Tente outra Vez!";
+    }
+
 }
