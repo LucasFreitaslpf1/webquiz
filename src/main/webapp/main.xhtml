@@ -19,7 +19,7 @@
 
             <ui:insert name="quizzes">
                 <br/><br/>
-                <div style="display: inline-block;">
+                <span style="display: inline-block;">
                     <h:link
                         rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizcapital'}" 
                         outcome="quizcapital">
@@ -28,7 +28,7 @@
                             Capitais e Países
                         </div>
                     </h:link>
-                </div>
+                </span>
                 <span style="display: inline-block;">
                     <h:link
                         rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizmatematica'}"

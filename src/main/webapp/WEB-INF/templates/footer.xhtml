@@ -9,6 +9,12 @@
         <br/><br/>
         <span style="display: inline-block;">
             <h:link 
+                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'welcome'}"
+                outcome="welcome" 
+                value="Início" />
+        </span>
+        <span style="display: inline-block;">
+            <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'main'}"
                 outcome="main" 
                 value="Índice" />
@@ -16,7 +22,7 @@
         <span style="display: inline-block;">
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'Sobre'}"
-                outcome="Sobre" 
+                outcome="sobre" 
                 value="Sobre" />
         </span>
         <br/>
