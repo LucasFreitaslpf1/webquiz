@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./WEB-INF/templates/default.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h1>Quem é o pai do Naruto?</h1>
+        <h2>Qual dos ninjas abaixo é o pai do Naruto Uzumaki?</h2>
+
+        <h:form style="display: inline-block; align-items: center">
+
+            <span style="display: inline-block; padding: 30px;">
+                <p><h:graphicImage style="width: 100px;
+                                   height: 100px;
+                                   border-radius: 20px;"
+                                   library="default" 
+                                   name="img/ninjaImg/iruka.png" 
+                                   /></p>
+                <p>
+                    <h:commandButton 
+                        action ="responsequiznaruto"
+                        actionListener ="#{quizNarutoBean.iruka}"
+                        value="Iruka Umino"
+                        />
+                </p>
+            </span>
+            <span style="display: inline-block; padding: 30px;">
+                <p><h:graphicImage style="width: 100px;
+                                   height: 100px;
+                                   border-radius: 20px;" 
+                                   library="default" 
+                                   name="img/ninjaImg/kakashi.png" /></p>
+                <p>
+                    <h:commandButton
+                        action ="responsequiznaruto"
+                        actionListener ="#{quizNarutoBean.kakashi}"
+                        value="Kakashi Hatake"
+                        />
+                </p>
+            </span>
+            <span style="display: inline-block; padding: 30px;">
+                <p><h:graphicImage style="width: 100px;
+                                   height: 100px;
+                                   border-radius: 20px;" 
+                                   library="default" 
+                                   name="img/ninjaImg/minato.png" /></p>
+                <p>
+                    <h:commandButton
+                        action ="responsequiznaruto"
+                        actionListener ="#{quizNarutoBean.minato}"
+                        value="Minato Namikaze"
+                        />
+                </p>
+            </span>
+            <span style="display: inline-block; padding: 30px;">
+                <p><h:graphicImage style="width: 100px;
+                                   height: 100px;
+                                   border-radius: 20px;" 
+                                   library="default" 
+                                   name="img/ninjaImg/madara.png" /></p>
+                <p>
+                    <h:commandButton
+                        action ="responsequiznaruto"
+                        actionListener ="#{quizNarutoBean.madara}"
+                        value="Madara Uchiha"
+                        />
+                </p>
+            </span>
+
+        </h:form>
+    </ui:define>
+
+</ui:composition>
