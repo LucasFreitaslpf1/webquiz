@@ -5,8 +5,6 @@
 package br.ifnmg.edu.aluno.webquiz;
 
 import java.io.Serializable;
-import javax.ejb.Stateless;
-import javax.enterprise.context.Dependent;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
@@ -35,8 +33,12 @@ public class QuizNarutoBean implements Serializable{
         return respostaSelecionada;
     }
     
+    public Boolean showGoBack(){
+        return respostaCorreta;
+    }
+    
     public String respostaCerta(){
-        return respostaCorreta ? "Parabéns! Resposta Correta!" : "Que Pena. Resposta Errada.";
+        return respostaCorreta ? "Parabéns! O pai do Naruto é o Minato Namikaze." : "Que Pena. Resposta Errada.";
     }
 
     // Add business logic below. (Right-click in editor and choose

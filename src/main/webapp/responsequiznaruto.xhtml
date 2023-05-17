@@ -6,15 +6,15 @@
                 xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <ui:define name="content">
-        <h1>Resposta:</h1>
-        <p>A resposta selecionada foi:
+        <h1>#{dicionario.response_title}</h1>
+        <p>#{dicionario.naruto_response_phrase}
             <h:outputLabel value="#{quizNarutoBean.verificarResposta()}"/> </p>
-        <p>Resultado: 
+            <p>#{dicionario.naruto_result}
             <h:outputLabel value="#{quizNarutoBean.respostaCerta()}"/>
         </p>
         <h:form>
-        <h:commandButton action="quiznaruto"
-                         value="Voltar"/>
+            <h:commandButton action="quiznaruto"
+                         value="#{dicionario.goback}"/>
         </h:form>
     </ui:define>
 
