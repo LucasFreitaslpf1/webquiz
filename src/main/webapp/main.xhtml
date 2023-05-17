@@ -13,7 +13,11 @@
                     value="#{empty userBean.name ? dicionario.visitante : userBean.name}" />
             </h:outputFormat></h1>
         <h2>
-            Escolha um quiz para jogar:
+            <h:outputFormat
+                value="#{dicionario.escolha_quiz}">
+                <f:param 
+                    value="#{empty userBean.name ? dicionario.visitante : userBean.name}" />
+            </h:outputFormat>
 
 
 
@@ -25,7 +29,7 @@
                         outcome="quizcapital">
                         <h:graphicImage class="quiz1" library="default" name="img/capitais.png" style="width: 100px; height: 100px"/>
                         <div style="display: flex; align-items: center; margin-right: 30px">
-                            Capitais e Países
+                            <h:outputLabel value="#{dicionario.capitais}" />
                         </div>
                     </h:link>
                 </span>
@@ -35,7 +39,7 @@
                         outcome="quizmatematica">
                         <h:graphicImage class="quiz2" library="default" name="img/matematica.png" style="width: 100px ; height: 100px"/>
                         <div style="display: flex; align-items: center; margin-right: 30px">
-                            Matemática
+                            <h:outputLabel value="#{dicionario.matematica}" />
                         </div>
                     </h:link>
                 </span>
@@ -45,7 +49,7 @@
                         outcome="quizcharada">
                         <h:graphicImage class="quiz3" library="default" name="img/charada.png" style="width: 100px ; height: 100px"/>
                         <div style="display: flex; align-items: center; margin-right: 30px">
-                            Charadas
+                            <h:outputLabel value="#{dicionario.charadas}" />
                         </div>
                     </h:link>
                 </span>
@@ -65,7 +69,7 @@
                         outcome="quizgravidade">
                         <h:graphicImage class="quiz5" library="default" name="img/gravidade.png" style="width: 100px ; height: 100px"/>
                         <div style="display: flex; align-items: center; margin-right: 30px">
-                            Gravidade
+                            <h:outputLabel value="#{dicionario.gravidade}" />
                         </div>
                     </h:link>
                 </span>

@@ -3,12 +3,23 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./WEB-INF/templates/default.xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="content">
-        <h1><h:outputLabel value="#{quizMatBean.acertou() ? 'Parabens!' : 'Que pena!' }"/></h1>
-        <p>O resultado era <h:outputLabel value="#{quizMatBean.resultado}"/> e você
-            disse <h:outputLabel value="#{quizMatBean.palpite}"/></p>
+        <h1><h:outputLabel value="#{quizMatBean.acertou() ? 
+                                    dicionario.matematica_acerto : dicionario.matematica_erro }"/></h1>
+<!--        <p>O resultado era <h:outputLabel value="#{quizMatBean.resultado}"/> e você
+            disse <h:outputLabel value="#{quizMatBean.palpite}"/></p>-->
+        <p>
+            <h:outputFormat
+                value="#{dicionario.matematica_resultado}">
+                <f:param 
+                    value="#{quizMatBean.resultado}" />
+                <f:param 
+                    value="#{quizMatBean.palpite}" />
+            </h:outputFormat>
+        </p>
         <br/>
         <h:link outcome="quizmatematica.xhtml" value="Voltar"/>
     </ui:define>

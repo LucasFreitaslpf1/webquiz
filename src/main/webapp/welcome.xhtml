@@ -12,10 +12,10 @@
                 <f:param 
                     value="#{empty userBean.name ? dicionario.visitante : userBean.name}" />
             </h:outputFormat></h1>
-        <h2>Insira seu nome: </h2>&nbsp;
+        <h2><h:outputLabel value="#{dicionario.digite_seu_nome}"/> </h2>&nbsp;
         <h:form>
-            <h:inputText value="#{userBean.name}"/><br/>
-            <h:commandButton value="Salvar" action="main"/>
+            <h:inputText value="#{userBean.name}"/><br/><br/>
+            <h:commandButton value="#{dicionario.salvar}" action="main"/>
         </h:form>
 
 

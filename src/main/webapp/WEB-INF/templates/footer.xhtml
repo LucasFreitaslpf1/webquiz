@@ -11,14 +11,14 @@
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'main'}"
                 outcome="main" 
-                value="Índice" />
+                value="#{dicionario.indice}" />
         </span>
         <span style="display: inline-block; padding: 10px;"></span>
         <span style="display: inline-block;">
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'sobre'}"
                 outcome="sobre" 
-                value="Sobre" />
+                value="#{dicionario.sobre}" />
         </span>
         <br/>
     </ui:insert>
@@ -29,7 +29,7 @@
                 <h:commandLink
                     rendered="#{not empty userBean.name}"
                     action="quizcapital.xhtml"
-                    value="Capitais Países"
+                    value="#{dicionario.capitais}"
 
                     />
             </span>
@@ -37,7 +37,7 @@
                 <h:commandLink
                     rendered="#{not empty userBean.name}"
                     action="quizmatematica.xhtml"
-                    value="Matemática"
+                    value="#{dicionario.matematica}"
 
                     />
             </span>
@@ -45,7 +45,7 @@
                 <h:commandLink
                     rendered="#{not empty userBean.name}"
                     action="quizcharada.xhtml"
-                    value="Charadas"
+                    value="#{dicionario.charadas}"
 
                     />
             </span>
@@ -60,7 +60,7 @@
                 <h:commandLink
                     rendered="#{not empty userBean.name}"
                     action="quizgravidade.xhtml"
-                    value="Gravidade"
+                    value="#{dicionario.gravidade}"
 
                     />
             </span>
