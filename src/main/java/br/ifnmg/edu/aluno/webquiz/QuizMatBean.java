@@ -18,7 +18,7 @@ import java.util.Random;
 public class QuizMatBean implements Serializable {
 
     private Integer resultado;
-    private Random r;
+    private final Random r;
     private Integer palpite;
 
     /**
