@@ -9,65 +9,63 @@
         <br/><br/>
         <span style="display: inline-block;">
             <h:link 
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'welcome'}"
-                outcome="welcome" 
-                value="Início" />
-        </span>
-        <span style="display: inline-block;">
-            <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'main'}"
                 outcome="main" 
                 value="Índice" />
         </span>
+        <span style="display: inline-block; padding: 10px;"></span>
         <span style="display: inline-block;">
             <h:link 
                 rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'Sobre'}"
-                outcome="sobre" 
+                outcome="Sobre" 
                 value="Sobre" />
         </span>
         <br/>
     </ui:insert>
-    
+
     <ui:insert name="quizzes">
-        <br/><br/>
-        <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizcapital'}"
-                outcome="quizcapital"
-                value="Capitais e Países" />
-        </span>
-        <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizmatematica'}"
-                outcome="quizmatematica"
-                value="Matemática" />
-        </span>
-        <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizcapital'}"
-                outcome="quizcapital"
-                value="Capitais Países" />
-        </span>
-        <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizcapital'}"
-                outcome="quizcapital"
-                value="Capitais Países" />
-        </span>
-        <span style="display: inline-block;">
-            <h:link
-                rendered="#{view.viewId.replace('/', '').replace('.xhtml','') ne 'quizcapital'}"
-                outcome="quizcapital"
-                value="Capitais Países" />
-        </span>
-        <br/><br/>
+        <h:form>
+            <span style="display: inline-block; padding: 5px;">
+                <h:commandLink
+                    rendered="#{not empty userBean.name}"
+                    action="quizcapital.xhtml"
+                    value="Capitais Países"
+
+                    />
+            </span>
+            <span style="display: inline-block; padding: 5px;">
+                <h:commandLink
+                    rendered="#{not empty userBean.name}"
+                    action="quizmatematica.xhtml"
+                    value="Matemática"
+
+                    />
+            </span>
+            <span style="display: inline-block; padding: 5px;">
+                <h:commandLink
+                    rendered="#{not empty userBean.name}"
+                    action="quizcapital.xhtml"
+                    value="Capitais Países"
+
+                    />
+            </span>
+            <span style="display: inline-block; padding: 5px;">
+                <h:commandLink
+                    rendered="#{not empty userBean.name}"
+                    action="quizcapital.xhtml"
+                    value="Capitais Países"
+
+                    />
+            </span><span style="display: inline-block; padding: 5px;">
+                <h:commandLink
+                    rendered="#{not empty userBean.name}"
+                    action="quizcapital.xhtml"
+                    value="Capitais Países"
+
+                    />
+            </span>
+        </h:form>
     </ui:insert>
-    
-
-
-
-
-
 
     <span style="display: inline-block; transform: rotate(180deg);">©</span> 2023 - IFNMG - Desenvolvimento Web
 </ui:composition>
